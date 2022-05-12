@@ -36,17 +36,26 @@
     
     btn[0].addEventListener("click", function(){
       // <!--memo 이벤트는 잘 작동함
-        
-        
         if(value===true){
+          // 만약에 value 값이 true면
           for(let i = 0; i < menu.length; i++){ 
+            // for 문을 돌리는데 i에 0을 대입하고 i가 menu의 배열의 개수보다 작을때 ++ 해줘
+            
             //<!-- ? for 문이 왜 작동을 안할까?~~
             //<!-- ? btn[0]밖에 안찍어줌 -> 이게 반복이 안되네 -> 왜 반복이 안될까????????
             //<!-- memo btn.length가 작동을 안함 -> 아 바보야 btn이 아니라 menu 잖아!!!!!!!!!!!
+
             menu[i].style.opacity = 0;
+            //그리고 menu의 [i]배열의 스타일의 투명도를 0으로 해줘
           }
+          // for문 끝남
+          
           value = false;
+          //그리고 value 값을 false로 바꿔줘
         } else if (value===false){
+          // else{} <- <!--? 이렇게 쓰면 안됨 
+          // 근데 여기에 else만 쓰면 안됨 <!-- ? 어차피 else의 뜻이 value값이 true가 아닐때니까 value값이 false인 경우도 포함 아니야?
+          
           for(let i = 0; i < menu.length; i++){ 
             menu[i].style.opacity = 1;
           }
