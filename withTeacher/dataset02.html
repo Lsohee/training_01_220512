@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+    #root{
+      display: flex;
+      background-color: #ccc;
+      justify-content: end;
+    }
+    #root>div{
+      margin:10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+  <div class="btn" data-show="1">menu-1</div>
+  <div class="menu" data-show="2">menu-2</div>
+  <div class="menu" data-show="2">menu-3</div>
+  <div class="menu" data-show="2">menu-4</div>
+  </div>
+  
+  <script>
+    const menu = document.getElementsByClassName("menu");
+    const btn = document.getElementsByClassName("btn");
+    btn[0].style.backgroundColor = "red";
+
+    console.dir(btn);
+    console.dir(menu);
+    let value = true;
+    
+    btn[0].addEventListener("click", function(){
+      // <!--memo 이벤트는 잘 작동함
+        
+        
+        if(value===true){
+          for(let i = 0; i < menu.length; i++){ 
+            //<!-- ? for 문이 왜 작동을 안할까?~~
+            //<!-- ? btn[0]밖에 안찍어줌 -> 이게 반복이 안되네 -> 왜 반복이 안될까????????
+            //<!-- memo btn.length가 작동을 안함 -> 아 바보야 btn이 아니라 menu 잖아!!!!!!!!!!!
+            menu[i].style.opacity = 0;
+          }
+          value = false;
+        } else if (value===false){
+          for(let i = 0; i < menu.length; i++){ 
+            menu[i].style.opacity = 1;
+          }
+          value = true;
+        }
+        
+
+
+
+    })
+    
+
+    
+
+
+    
+  </script>
+  
+</body>
+</html>
