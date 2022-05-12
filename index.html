@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    #root{width: 100vw; height:100vh; 
+      /* background-color: #ccc; */
+      display: flex; justify-content: center;align-items: center;}
+    #root>div{
+      width:20rem;
+      height:35rem;
+      /* border: 1px solid black; */
+    }
+
+    /*
+    <!-- memo main color 
+    <!-- memo first element - purple and lawngreen
+    */
+    #root>div:nth-child(1){
+      position: relative;
+      z-index: 2;
+    }
+    #root>div:nth-child(1)>div{
+      width:100%;
+      height:50%;
+      /* border: 1px solid black; */
+    }
+
+    /* <!--memo purple */
+    #root>div:nth-child(1)>div:nth-child(1)>div:nth-child(1){
+      width:100%;
+      height:18rem;
+      background-color: purple;
+      border: 2px solid red;
+    }
+
+
+    /* <!--memo lawngreen */
+    #root>div:nth-child(1)>div:nth-child(1)>div:nth-child(2){
+      width:10em;
+      height:2em;
+      border-radius: 20px;
+      background-color: lawngreen;
+      position: relative;
+      left:9em;
+      top:-1.5em;
+      border: 2px solid red;
+    }
+
+    
+    
+    
+    /* <!-- memo second element - darkgreen */
+    #root>div:nth-child(1)>div:nth-child(2){
+      width:100%;
+      height:50%;
+      background-color: darkgreen;
+      border: 2px solid blue;
+    }
+
+
+    /* <!-- memo shadow */
+
+    #root>div:nth-child(2){
+      background-color: #ccc;
+      opacity: 0.4;
+      filter: blur(2px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: relative;
+      top:3em;
+      left:-5em;
+      z-index: 1;
+    }
+    #root>div:nth-child(2)>div:nth-child(1){
+      font-size: 4em;
+      color:#333;
+    }
+    #root>div:nth-child(2)>div:nth-child(2){
+      text-align: end;
+      color:#333;
+    }
+    #root>div:nth-child(2)>div:nth-child(3){
+      text-align: justify;
+      font-size: 12px;
+      /* margin-top: 5em; */
+      color:#333;
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="root">
+    <div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div></div>
+    </div>
+
+    
+    <div>
+      <div>good design</div>
+      <div>loremipsum</div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deserunt animi debitis mollitia id natus atque amet nihil quo, hic accusantium quaerat expedita eveniet accusamus, aperiam obcaecati rerum quos aut?
+        Quia, nobis assumenda distinctio numquam quidem, hic tempore illo esse, iusto enim ea praesentium eveniet aliquid adipisci sit. Laborum aliquam rerum expedita incidunt praesentium aut cumque minus mollitia facere cum.
+        Officiis dicta dolorum maiores praesentium sed. Doloremque architecto molestiae atque odio ipsa? Dolorum, blanditiis sapiente excepturi quis dicta in quibusdam illo nisi commodi ipsum tempore minima est. Veritatis, non ab.
+        Quidem nemo nulla eos veritatis non odit iure impedit libero consequatur corporis, provident pariatur sit ducimus aliquam est minima nam quibusdam, numquam culpa. Facere fugit, facilis asperiores consequuntur eaque incidunt!
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
